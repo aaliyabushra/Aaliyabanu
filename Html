@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aaliya • Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Animated gradient background -->
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <div class="bg-noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home">Aaliya</a>
+    <nav class="nav">
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <ul class="nav-list" id="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a class="btn" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home">
+    <!-- Hero -->
+    <section class="section hero reveal">
+      <div class="hero-content">
+        <h1>Hi, I’m <span class="highlight">Aaliya</span> 👋</h1>
+        <p class="subtitle">Aspiring Web Developer crafting elegant, responsive interfaces.</p>
+        <div class="cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn btn-ghost" href="#contact">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section card reveal">
+      <h2>About Me</h2>
+      <p>
+        I’m Aaliya, a frontend-focused developer who enjoys turning ideas into
+        accessible, delightful web experiences. I love clean UI, smooth animations,
+        and writing maintainable code.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section card reveal">
+      <h2>Skills</h2>
+      <ul class="chips">
+        <li>HTML5</li>
+        <li>CSS3 (Flexbox, Grid)</li>
+        <li>JavaScript (ES6+)</li>
+        <li>Responsive Design</li>
+        <li>Git & GitHub</li>
+        <li>Basic UI/UX</li>
+      </ul>
+      <div class="skill-bars">
+        <div class="skill">
+          <span>HTML</span>
+          <div class="bar"><span style="--w: 90%"></span></div>
+        </div>
+        <div class="skill">
+          <span>CSS</span>
+          <div class="bar"><span style="--w: 85%"></span></div>
+        </div>
+        <div class="skill">
+          <span>JavaScript</span>
+          <div class="bar"><span style="--w: 75%"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section reveal">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="project card">
+          <h3>Portfolio Website</h3>
+          <p>A responsive, animated personal site built with HTML, CSS, and JS.</p>
+          <a class="link" href="#" aria-disabled="true">Coming soon</a>
+        </article>
+
+        <article class="project card">
+          <h3>Task Tracker</h3>
+          <p>Simple to-do app with localStorage and smooth UI interactions.</p>
+          <a class="link" href="#" aria-disabled="true">Coming soon</a>
+        </article>
+
+        <article class="project card">
+          <h3>Image Gallery</h3>
+          <p>CSS Grid gallery with lightbox and keyboard navigation.</p>
+          <a class="link" href="#" aria-disabled="true">Coming soon</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section card reveal">
+      <h2>Contact</h2>
+      <p>Feel free to reach out—let’s build something great together!</p>
+      <a class="btn" href="mailto:aaliyabushra29@gmail.com">aaliyabushra29@gmail.com</a>
+      <form class="contact-form" onsubmit="return false;" aria-label="Contact form">
+        <div class="row">
+          <input type="text" placeholder="Your name" required />
+          <input type="email" placeholder="Your email" required />
+        </div>
+        <textarea rows="5" placeholder="Your message"></textarea>
+        <button class="btn" type="submit">Send (Demo)</button>
+        <small class="muted">This demo form doesn’t send emails; use the email button above.</small>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Aaliya • Built with ♥ using HTML, CSS & JS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
