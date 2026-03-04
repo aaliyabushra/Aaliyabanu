@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>PYTHON SCRIPTING WORKSHOP</h1>
+        <p class="description">Enhance your automation skills with Adroit Technologies.</p>
+    </header>
+
+    <main class="card-container">
+        <section class="info-section">
+            <h3>Event Details</h3>
+            <div class="info-grid">
+                <p><strong>Date:</strong> 15th April 2026</p>
+                <p><strong>Venue:</strong> Blue-Tech Hall B</p>
+                <p><strong>Time:</strong> 09:30 AM</p>
+            </div>
+        </section>
+
+        <form>
+            <fieldset>
+                <legend>Student Profile</legend>
+                <div class="field">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter name">
+                </div>
+                <div class="field">
+                    <label>Email Address</label>
+                    <input type="text" placeholder="user@blue.com">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Workshop Track</legend>
+                <div class="field">
+                    <label>Select Level</label>
+                    <select>
+                        <option>Beginner (Basics)</option>
+                        <option>Advanced (Logic)</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Upload ID</label>
+                    <input type="file">
+                </div>
+            </fieldset>
+
+            <div class="declaration">
+                <input type="checkbox" id="agree">
+                <label for="agree">I agree to follow the workshop guidelines.</label>
+            </div>
+
+            <div class="btn-group">
+                <button type="submit" class="submit-btn">Confirm Registration</button>
+                <button type="reset" class="reset-btn">Reset</button>
+            </div>
+        </form>
+
+        <section class="table-area">
+            <h3>Recent Registrations</h3>
+            <table class="blue-table">
+                <thead>
+                    <tr>
+                        <th>Participant</th>
+                        <th>Track</th>
+                        <th>Batch</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Arun Kumar</td><td>Python</td><td>Morning</td></tr>
+                    <tr><td>Deepak Raj</td><td>Java</td><td>Evening</td></tr>
+                    <tr><td>Sneha Ray</td><td>Python</td><td>Morning</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact: events@workshop.com | Support: +91 44 2233 4455</p>
+        <p>&copy; 2026 TN Skill Development & Oracle University</p>
+    </footer>
+
+</body>
+</html>
