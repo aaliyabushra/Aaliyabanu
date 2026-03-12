@@ -1,0 +1,43 @@
+<!DOCTYPE html>  <html>  
+<head>  
+<title>Workshop Event</title>  
+<link rel="stylesheet" href="style.css">  
+</head>  <body>  <div class="container">  <center>  
+<h1> Python Scripting Web Development Workshop</h1>  
+<h3>Organized by Computer Application Department</h3>  
+<hr>  
+</center>  <h2>Event Details</h2>  
+<p><b>Date:</b> 20 March 2026</p>  
+<p><b>Time:</b> 9:30 AM to 3:30 PM</p>  
+<p><b>Venue:</b> College Auditorium</p>  <h2>Registration Form</h2>  <form>  <label>Full Name:</label><br>
+<input type="text"><br><br>
+
+<label>Email:</label><br>
+<input type="email"><br><br>
+
+<label>Phone Number:</label><br>
+<input type="tel"><br><br>
+
+<label>Gender:</label><br>
+<input type="radio" name="gender"> Male<br>
+<input type="radio" name="gender" checked> Female
+<br><br>
+
+<label>Select Course:</label><br>
+<select class="course">
+
+<option>HTML</option>  
+<option>CSS</option>  
+<option>JavaScript</option>  
+</select>  
+<br><br>  <label>Address:</label><br>
+
+<textarea rows="4"></textarea>  <br><br>
+
+<button type="submit" class="register">Register</button>
+<button type="reset" class="clear">Clear</button>
+
+</form>  <hr>  <center>  
+<p>© 2026 Workshop Event</p>  
+</center>  </div>  </body>  
+</html>
