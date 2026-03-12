@@ -1,0 +1,47 @@
+let participants = 0;
+
+function registerParticipant(event){
+
+event.preventDefault();
+
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+let phone = document.getElementById("phone").value;
+let eventName = document.getElementById("event").value;
+
+let mode = "";
+
+if(document.getElementById("online").checked){
+mode = "Online";
+}
+
+if(document.getElementById("offline").checked){
+mode = "Offline";
+}
+
+let table = document.getElementById("participantsTable");
+
+let row = table.insertRow(-1);
+
+let cell1 = row.insertCell(0);
+let cell2 = row.insertCell(1);
+let cell3 = row.insertCell(2);
+let cell4 = row.insertCell(3);
+let cell5 = row.insertCell(4);
+
+cell1.innerText = name;
+cell2.innerText = email;
+cell3.innerText = phone;
+cell4.innerText = eventName;
+cell5.innerText = mode;
+
+participants++;
+
+document.getElementById("count").innerText = participants;
+
+document.getElementById("successMsg").innerText =
+"Registration Successful! Welcome " + name + "!";
+
+document.getElementById("registrationForm").reset();
+
+}
