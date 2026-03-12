@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Activity Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Activity Tracker</h1>
+        <p>Welcome! Track your daily learning progress here.</p>
+    </header>
+
+    <main id="app">
+        <section class="summary">
+            <h3>Progress Summary</h3>
+            <p id="progress-text">0 out of 0 activities completed</p>
+        </section>
+
+        <section class="activity-list" id="activity-container">
+            </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+css
+/* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.activity-card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-completed {
+    color: green;
+    font-weight: bold;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ccc;
+}
+JavaScript 
+// script.js
+
+// 1. Static JSON-based data
+const activities = [
+    { id: 1, name: "HTML Basics", desc: "Complete the tags module", status: "Pending" },
+    { id: 2, name: "CSS Flexbox", desc: "Design a responsive layout", status: "Pending" },
+    { id: 3, name: "JS Functions", desc: "Write 5 arrow functions", status: "Pending" }
+];
+
+function renderActivities() {
+    const container = document.getElementById('activity-container');
+    container.innerHTML = '';
+    let completedCount = 0;
+
+    activities.forEach(task => {
+        if (task.status === "Completed") completedCount++;
+
+        const card = document.createElement('div');
+        card.className = 'activity-card';
+        card.innerHTML = `
+            <div>
+                <strong>${task.name}</strong>
+                <p>${task.desc}</p>
+                <span class="${task.status === 'Completed' ? 'status-completed' : ''}">${task.status}</span>
+            </div>
+            <button onclick="markComplete(${task.id})" ${task.status === 'Completed' ? 'disabled' : ''}>
+                Mark Complete
+            </button>
+        `;
+        container.appendChild(card);
+    });
+
+    // Update Progress Summary
+    document.getElementById('progress-text').innerText = 
+        `${completedCount} out of ${activities.length} activities completed`;
+}
+
+// 2. Function to update status
+function markComplete(id) {
+    const task = activities.find(a => a.id === id);
+    if (task) {
+        task.status = "Completed";
+        renderActivities(); // Re-render to show changes
+    }
+}
+
+// Initial Load
+renderActivities();
